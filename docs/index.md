@@ -1,4 +1,4 @@
-# Welcome to the Aragon Wiki
+# Welcome to the Searchr Wiki
 
 ![](images/logo_text_right_dark.png)
 
