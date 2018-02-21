@@ -1,2450 +1,688 @@
-
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Wiki for the Aragon Project">
-      
-      
-        <link rel="canonical" href="https://wiki.aragon.one/documentation/Development_Plan/">
-      
-      
-      
-        <link rel="shortcut icon" href="../../images/favicon.ico">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
-    
-    
-      
-        <title>Development Plan - Aragon Wiki</title>
-      
-    
-    
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-a20f419c8e.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
-      
-    
-    
-      
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-    
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
-    
-    
-  </head>
-  
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="cyan">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://wiki.aragon.one" title="Aragon Wiki" class="md-header-nav__button md-logo">
-          
-            
-              <img src="../../images/logo.svg" width="24" height="24">
-            
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
-          
-            
-              
-                <span class="md-header-nav__parent">
-                  Documentation
-                </span>
-              
-            
-            Development Plan
-          
-        </span>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
+        <meta name="author" content="Searchr">
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/documentation/Development_Plan/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Development Plan - Searchr</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../stylesheets/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-XXXXXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Searchr</a>
         </div>
-      </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../whitepaper/">Whitepaper</a>
+</li>
+                            
+<li >
+    <a href="../aragonOS/">aragonOS</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Governance</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Community_Governance_Model/">AGP2 - Community Governance Model</a>
+</li>
+            
+<li >
+    <a href="../Migration_to_Open_Source_Messaging_Platform/">AGP5 - Migration to Open Source Messaging Platform</a>
+</li>
+            
+<li >
+    <a href="../Merge_Aragon_HQ_and_Community_meetings/">AGP7 - Merge Aragon HQ and Community meetings</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Multisigs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../multisigs/overview/">Overview</a>
+</li>
+            
+<li >
+    <a href="../multisigs/foundation/">Foundation</a>
+</li>
+            
+<li >
+    <a href="../multisigs/community/">Community</a>
+</li>
+    </ul>
+  </li>
+                            
+<li class="active">
+    <a href="./">Development Plan</a>
+</li>
+                            
+<li >
+    <a href="../Code_of_Conduct/">Aragon Code of Conduct</a>
+</li>
+                            
+<li >
+    <a href="../presentations/">Presentations</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Audit reports</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../audits/audit01_report_dossa/">Audit 01 by Adam Dossa</a>
+</li>
+            
+<li >
+    <a href="../audits/audit_internal_sun/">Audit (Internal) by Brett Sun</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../community_content/">Community Content</a>
+</li>
+                            
+<li >
+    <a href="../../projects/">Third-party Projects</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../dev/">Overview</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">aragonOS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../dev/aragonOS_index/">Overview</a>
+</li>
+            
+<li >
+    <a href="../../dev/aragonOS_how_to_contribute/">How to contribute</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Aragon Apps</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../dev/apps/">Overview</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/voting/">Voting</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/token-manager/">Token Manager</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/group/">Group</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/fundraising/">Fundraising</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/vault/">Vault</a>
+</li>
+            
+<li >
+    <a href="../../dev/apps/finance/">Finance</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../design/">Overview</a>
+</li>
+                            
+<li >
+    <a href="../../design/logo/">Logo</a>
+</li>
+                            
+<li >
+    <a href="../../design/artwork/">Artwork</a>
+</li>
+                            
+<li >
+    <a href="../../design/identity_guidelines/">Identity Guidelines</a>
+</li>
+                            
+<li >
+    <a href="../../design/branding_proposal/">Branding Proposal</a>
+</li>
+                            
+<li >
+    <a href="../../design/merch/">Merchandise</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meetings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Community</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Community 08</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../meetings/community/08/">Agenda</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/alexa/">Write-Up - Alexa</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/brett/">Write-Up - Brett</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/john/">Write-Up - John</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/jorge/">Write-Up - Jorge</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/luis/">Write-Up - Luis</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/luke/">Write-Up - Luke</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/maria/">Write-Up - Maria</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/oliver/">Write-Up - Oliver</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/pierre/">Write-Up - Pierre</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm08/tatu/">Write-Up - Tatu</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Community 07</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../meetings/community/07/">Agenda</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/alexa/">Write-Up - Alexa</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/brett/">Write-Up - Brett</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/light-cm07/">Write-Up - John</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/jorge/">Write-Up - Jorge</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/luis/">Write-Up - Luis</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/luke/">Write-Up - Luke</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/maria/">Write-Up - Maria</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/oliver/">Write-Up - Oliver</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/pierre/">Write-Up - Pierre</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm07/tatu/">Write-Up - Tatu</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Community 06</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../meetings/community/06/">Agenda</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/brett/">Write-Up - Brett</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/john/">Write-Up - John</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/jorge/">Write-Up - Jorge</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/luis/">Write-Up - Luis</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/luke/">Write-Up - Luke</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/maria/">Write-Up - Maria</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/oliver/">Write-Up - Oliver</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/pierre/">Write-Up - Pierre</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/write-ups/cm06/tatu/">Write-Up - Tatu</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../meetings/community/05/">Community 05</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/04/">Community 04</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/03/">Community 03</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/02/">Community 02</a>
+</li>
+            
+<li >
+    <a href="../../meetings/community/01/">Community 01</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../jobs/">Overview</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Openings</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../jobs/openings/solidity/">EVM/Solidity Engineer</a>
+</li>
+            
+<li >
+    <a href="../../jobs/openings/frontend/">Frontend and web3 Developer</a>
+</li>
+            
+<li >
+    <a href="../../jobs/openings/dev_rel/">Developer Relations</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog posts <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../blog/2018/">2018</a>
+</li>
+                            
+<li >
+    <a href="../../blog/2017/">2017</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Videos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../videos/tutorials/">Tutorials</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Meetings</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../videos/community/">Community</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../../videos/interviews/">Interviews</a>
+</li>
+                            
+<li >
+    <a href="../../videos/presentations/">Presentations</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Press <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../press/press-kit/">Press Kit</a>
+</li>
+                            
+<li >
+    <a href="../../press/media-mentions/">Media Mentions</a>
+</li>
+                            
+<li >
+    <a href="../../press/contact/">Contact</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aragon Nest <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../nest/">Overview</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Guides</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../nest/guides/guide_for_submitting_a_proposal_for_grants/">Guide for submitting a Proposal for a grant</a>
+</li>
+            
+<li >
+    <a href="../../nest/guides/guide_for_submitting_a_request_for_funding/">Guide for submitting a new Request for funding</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Templates</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../nest/templates/ISSUE_TEMPLATE/">New Issue Template</a>
+</li>
+            
+<li >
+    <a href="../../nest/templates/PULL_REQUEST_TEMPLATE/">New Pull Request Template</a>
+</li>
+            
+<li >
+    <a href="../../nest/templates/team/">team.md Template</a>
+</li>
+            
+<li >
+    <a href="../../nest/templates/roadmap/">roadmap.md Template</a>
+</li>
+    </ul>
+  </li>
+                            
+<li >
+    <a href="../../nest/faqs/">FAQ</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../archive/documentation/agp5/RocketChat/">AGP5 - Rocket Chat comparison</a>
+</li>
+            
+<li >
+    <a href="../../archive/documentation/agp5/Riot/">AGP5 - Riot comparison</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Meetings</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Aragon HQ</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../archive/meetings/hq/01/">HQ 01</a>
+</li>
+            
+<li >
+    <a href="../../archive/meetings/hq/02/">HQ 02</a>
+</li>
+            
+<li >
+    <a href="../../archive/meetings/hq/03/">HQ 03</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Dev</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../archive/meetings/dev/01/">Dev 01</a>
+</li>
+            
+<li >
+    <a href="../../archive/meetings/dev/02/">Dev 02</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Videos</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Meetings</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../archive/videos/hq/">Aragon HQ</a>
+</li>
+            
+<li >
+    <a href="../../archive/videos/dev/">Dev</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Translations <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Español (Spanish)</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../translations/spanish/">Hola</a>
+</li>
+            
+<li >
+    <a href="../../translations/spanish/aragonos/">aragonOS</a>
+</li>
+            
+<li >
+    <a href="../../translations/spanish/devplan/">Development Plan</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../multisigs/community/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Code_of_Conduct/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/shaunnarayan/edit/master/docs/documentation/Development_Plan.md">Edit on shaunnarayan/searchr-wiki</a>
+                    </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
 
-
-  
-
-
-  <a href="https://github.com/aragon/aragon-wiki" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      aragon/aragon-wiki
-    </div>
-  </a>
-
-          </div>
-        </div>
-      
-    </div>
-  </nav>
-</header>
-    
-    <div class="md-container">
-      
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
-      
-        
-          <img src="../../images/logo.svg">
-        
-      
-    </div>
-    Aragon Wiki
-  </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-
-  <a href="https://github.com/aragon/aragon-wiki" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      aragon/aragon-wiki
-    </div>
-  </a>
-
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
-    <label class="md-nav__link" for="nav-2">
-      Documentation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Documentation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../whitepaper/" title="Whitepaper" class="md-nav__link">
-      Whitepaper
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../aragonOS/" title="aragonOS" class="md-nav__link">
-      aragonOS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
-    
-    <label class="md-nav__link" for="nav-2-3">
-      Governance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-3">
-        Governance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Community_Governance_Model/" title="AGP2 - Community Governance Model" class="md-nav__link">
-      AGP2 - Community Governance Model
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Migration_to_Open_Source_Messaging_Platform/" title="AGP5 - Migration to Open Source Messaging Platform" class="md-nav__link">
-      AGP5 - Migration to Open Source Messaging Platform
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Merge_Aragon_HQ_and_Community_meetings/" title="AGP7 - Merge Aragon HQ and Community meetings" class="md-nav__link">
-      AGP7 - Merge Aragon HQ and Community meetings
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
-    
-    <label class="md-nav__link" for="nav-2-4">
-      Multisigs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-4">
-        Multisigs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../multisigs/overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../multisigs/foundation/" title="Foundation" class="md-nav__link">
-      Foundation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../multisigs/community/" title="Community" class="md-nav__link">
-      Community
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Development Plan
-      </label>
-    
-    <a href="./" title="Development Plan" class="md-nav__link md-nav__link--active">
-      Development Plan
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history-vision" title="History &amp; Vision" class="md-nav__link">
-    History &amp; Vision
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organizational-structure" title="Organizational Structure" class="md-nav__link">
-    Organizational Structure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-milestones" title="Development Milestones" class="md-nav__link">
-    Development Milestones
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#01-the-initial-release" title="0.1 — The Initial Release" class="md-nav__link">
-    0.1 — The Initial Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#02-the-public-release" title="0.2 — The Public Release" class="md-nav__link">
-    0.2 — The Public Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#03-the-governance-release" title="0.3 — The Governance Release" class="md-nav__link">
-    0.3 — The Governance Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#04-the-bridge-release" title="0.4 — The Bridge Release" class="md-nav__link">
-    0.4 — The Bridge Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#05-the-refactor-release" title="0.5 — The Refactor Release" class="md-nav__link">
-    0.5 — The Refactor Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#06-the-sweet-release" title="0.6 — The Sweet Release" class="md-nav__link">
-    0.6 — The Sweet Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#07-the-network-release" title="0.7 — The Network Release" class="md-nav__link">
-    0.7 — The Network Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#08-the-court-release" title="0.8 — The Court Release" class="md-nav__link">
-    0.8 — The Court Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#09-the-unknown-release" title="0.9 — The Unknown Release" class="md-nav__link">
-    0.9 — The Unknown Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-the-release" title="1.0 — The Release" class="md-nav__link">
-    1.0 — The Release
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#development-plan">Development Plan</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#history-vision">History &amp; Vision</a></li>
+            <li><a href="#organizational-structure">Organizational Structure</a></li>
+            <li><a href="#development-milestones">Development Milestones</a></li>
     </ul>
-  
-</nav>
-    
-  </li>
+</div></div>
+                <div class="col-md-9" role="main">
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Code_of_Conduct/" title="Aragon Code of Conduct" class="md-nav__link">
-      Aragon Code of Conduct
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../presentations/" title="Presentations" class="md-nav__link">
-      Presentations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-8" type="checkbox" id="nav-2-8">
-    
-    <label class="md-nav__link" for="nav-2-8">
-      Audit reports
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-8">
-        Audit reports
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../audits/audit01_report_dossa/" title="Audit 01 by Adam Dossa" class="md-nav__link">
-      Audit 01 by Adam Dossa
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../audits/audit_internal_sun/" title="Audit (Internal) by Brett Sun" class="md-nav__link">
-      Audit (Internal) by Brett Sun
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../community_content/" title="Community Content" class="md-nav__link">
-      Community Content
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../projects/" title="Third-party Projects" class="md-nav__link">
-      Third-party Projects
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Development
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Development
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
-    
-    <label class="md-nav__link" for="nav-3-2">
-      aragonOS
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        aragonOS
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/aragonOS_index/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/aragonOS_how_to_contribute/" title="How to contribute" class="md-nav__link">
-      How to contribute
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3">
-      Aragon Apps
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Aragon Apps
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/voting/" title="Voting" class="md-nav__link">
-      Voting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/token-manager/" title="Token Manager" class="md-nav__link">
-      Token Manager
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/group/" title="Group" class="md-nav__link">
-      Group
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/fundraising/" title="Fundraising" class="md-nav__link">
-      Fundraising
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/vault/" title="Vault" class="md-nav__link">
-      Vault
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../dev/apps/finance/" title="Finance" class="md-nav__link">
-      Finance
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Design
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Design
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/logo/" title="Logo" class="md-nav__link">
-      Logo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/artwork/" title="Artwork" class="md-nav__link">
-      Artwork
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/identity_guidelines/" title="Identity Guidelines" class="md-nav__link">
-      Identity Guidelines
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/branding_proposal/" title="Branding Proposal" class="md-nav__link">
-      Branding Proposal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../design/merch/" title="Merchandise" class="md-nav__link">
-      Merchandise
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Meetings
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Meetings
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
-    
-    <label class="md-nav__link" for="nav-5-1">
-      Community
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
-        Community
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1-1" type="checkbox" id="nav-5-1-1">
-    
-    <label class="md-nav__link" for="nav-5-1-1">
-      Community 08
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-5-1-1">
-        Community 08
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/08/" title="Agenda" class="md-nav__link">
-      Agenda
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/alexa/" title="Write-Up - Alexa" class="md-nav__link">
-      Write-Up - Alexa
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/brett/" title="Write-Up - Brett" class="md-nav__link">
-      Write-Up - Brett
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/john/" title="Write-Up - John" class="md-nav__link">
-      Write-Up - John
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/jorge/" title="Write-Up - Jorge" class="md-nav__link">
-      Write-Up - Jorge
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/luis/" title="Write-Up - Luis" class="md-nav__link">
-      Write-Up - Luis
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/luke/" title="Write-Up - Luke" class="md-nav__link">
-      Write-Up - Luke
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/maria/" title="Write-Up - Maria" class="md-nav__link">
-      Write-Up - Maria
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/oliver/" title="Write-Up - Oliver" class="md-nav__link">
-      Write-Up - Oliver
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/pierre/" title="Write-Up - Pierre" class="md-nav__link">
-      Write-Up - Pierre
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm08/tatu/" title="Write-Up - Tatu" class="md-nav__link">
-      Write-Up - Tatu
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1-2" type="checkbox" id="nav-5-1-2">
-    
-    <label class="md-nav__link" for="nav-5-1-2">
-      Community 07
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-5-1-2">
-        Community 07
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/07/" title="Agenda" class="md-nav__link">
-      Agenda
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/alexa/" title="Write-Up - Alexa" class="md-nav__link">
-      Write-Up - Alexa
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/brett/" title="Write-Up - Brett" class="md-nav__link">
-      Write-Up - Brett
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/light-cm07/" title="Write-Up - John" class="md-nav__link">
-      Write-Up - John
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/jorge/" title="Write-Up - Jorge" class="md-nav__link">
-      Write-Up - Jorge
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/luis/" title="Write-Up - Luis" class="md-nav__link">
-      Write-Up - Luis
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/luke/" title="Write-Up - Luke" class="md-nav__link">
-      Write-Up - Luke
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/maria/" title="Write-Up - Maria" class="md-nav__link">
-      Write-Up - Maria
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/oliver/" title="Write-Up - Oliver" class="md-nav__link">
-      Write-Up - Oliver
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/pierre/" title="Write-Up - Pierre" class="md-nav__link">
-      Write-Up - Pierre
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm07/tatu/" title="Write-Up - Tatu" class="md-nav__link">
-      Write-Up - Tatu
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1-3" type="checkbox" id="nav-5-1-3">
-    
-    <label class="md-nav__link" for="nav-5-1-3">
-      Community 06
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-5-1-3">
-        Community 06
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/06/" title="Agenda" class="md-nav__link">
-      Agenda
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/brett/" title="Write-Up - Brett" class="md-nav__link">
-      Write-Up - Brett
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/john/" title="Write-Up - John" class="md-nav__link">
-      Write-Up - John
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/jorge/" title="Write-Up - Jorge" class="md-nav__link">
-      Write-Up - Jorge
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/luis/" title="Write-Up - Luis" class="md-nav__link">
-      Write-Up - Luis
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/luke/" title="Write-Up - Luke" class="md-nav__link">
-      Write-Up - Luke
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/maria/" title="Write-Up - Maria" class="md-nav__link">
-      Write-Up - Maria
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/oliver/" title="Write-Up - Oliver" class="md-nav__link">
-      Write-Up - Oliver
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/pierre/" title="Write-Up - Pierre" class="md-nav__link">
-      Write-Up - Pierre
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/write-ups/cm06/tatu/" title="Write-Up - Tatu" class="md-nav__link">
-      Write-Up - Tatu
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/05/" title="Community 05" class="md-nav__link">
-      Community 05
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/04/" title="Community 04" class="md-nav__link">
-      Community 04
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/03/" title="Community 03" class="md-nav__link">
-      Community 03
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/02/" title="Community 02" class="md-nav__link">
-      Community 02
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../meetings/community/01/" title="Community 01" class="md-nav__link">
-      Community 01
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Jobs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Jobs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../jobs/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
-    
-    <label class="md-nav__link" for="nav-6-2">
-      Openings
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-2">
-        Openings
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../jobs/openings/solidity/" title="EVM/Solidity Engineer" class="md-nav__link">
-      EVM/Solidity Engineer
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../jobs/openings/frontend/" title="Frontend and web3 Developer" class="md-nav__link">
-      Frontend and web3 Developer
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../jobs/openings/dev_rel/" title="Developer Relations" class="md-nav__link">
-      Developer Relations
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Blog posts
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Blog posts
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../blog/2018/" title="2018" class="md-nav__link">
-      2018
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../blog/2017/" title="2017" class="md-nav__link">
-      2017
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Videos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Videos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../videos/tutorials/" title="Tutorials" class="md-nav__link">
-      Tutorials
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
-    
-    <label class="md-nav__link" for="nav-8-2">
-      Meetings
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-2">
-        Meetings
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../videos/community/" title="Community" class="md-nav__link">
-      Community
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../videos/interviews/" title="Interviews" class="md-nav__link">
-      Interviews
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../videos/presentations/" title="Presentations" class="md-nav__link">
-      Presentations
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      Press
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Press
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../press/press-kit/" title="Press Kit" class="md-nav__link">
-      Press Kit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../press/media-mentions/" title="Media Mentions" class="md-nav__link">
-      Media Mentions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../press/contact/" title="Contact" class="md-nav__link">
-      Contact
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Aragon Nest
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Aragon Nest
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
-    
-    <label class="md-nav__link" for="nav-10-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/guides/guide_for_submitting_a_proposal_for_grants/" title="Guide for submitting a Proposal for a grant" class="md-nav__link">
-      Guide for submitting a Proposal for a grant
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/guides/guide_for_submitting_a_request_for_funding/" title="Guide for submitting a new Request for funding" class="md-nav__link">
-      Guide for submitting a new Request for funding
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3" type="checkbox" id="nav-10-3">
-    
-    <label class="md-nav__link" for="nav-10-3">
-      Templates
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-3">
-        Templates
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/templates/ISSUE_TEMPLATE/" title="New Issue Template" class="md-nav__link">
-      New Issue Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/templates/PULL_REQUEST_TEMPLATE/" title="New Pull Request Template" class="md-nav__link">
-      New Pull Request Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/templates/team/" title="team.md Template" class="md-nav__link">
-      team.md Template
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/templates/roadmap/" title="roadmap.md Template" class="md-nav__link">
-      roadmap.md Template
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/faqs/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Archive
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Archive
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-1" type="checkbox" id="nav-11-1">
-    
-    <label class="md-nav__link" for="nav-11-1">
-      Documentation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-1">
-        Documentation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/documentation/agp5/RocketChat/" title="AGP5 - Rocket Chat comparison" class="md-nav__link">
-      AGP5 - Rocket Chat comparison
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/documentation/agp5/Riot/" title="AGP5 - Riot comparison" class="md-nav__link">
-      AGP5 - Riot comparison
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-2" type="checkbox" id="nav-11-2">
-    
-    <label class="md-nav__link" for="nav-11-2">
-      Meetings
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-2">
-        Meetings
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-2-1" type="checkbox" id="nav-11-2-1">
-    
-    <label class="md-nav__link" for="nav-11-2-1">
-      Aragon HQ
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-2-1">
-        Aragon HQ
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/meetings/hq/01/" title="HQ 01" class="md-nav__link">
-      HQ 01
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/meetings/hq/02/" title="HQ 02" class="md-nav__link">
-      HQ 02
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/meetings/hq/03/" title="HQ 03" class="md-nav__link">
-      HQ 03
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-2-2" type="checkbox" id="nav-11-2-2">
-    
-    <label class="md-nav__link" for="nav-11-2-2">
-      Dev
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-2-2">
-        Dev
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/meetings/dev/01/" title="Dev 01" class="md-nav__link">
-      Dev 01
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/meetings/dev/02/" title="Dev 02" class="md-nav__link">
-      Dev 02
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-3" type="checkbox" id="nav-11-3">
-    
-    <label class="md-nav__link" for="nav-11-3">
-      Videos
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-11-3">
-        Videos
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-3-1" type="checkbox" id="nav-11-3-1">
-    
-    <label class="md-nav__link" for="nav-11-3-1">
-      Meetings
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-11-3-1">
-        Meetings
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/videos/hq/" title="Aragon HQ" class="md-nav__link">
-      Aragon HQ
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../archive/videos/dev/" title="Dev" class="md-nav__link">
-      Dev
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
-      Translations
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Translations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-1" type="checkbox" id="nav-12-1">
-    
-    <label class="md-nav__link" for="nav-12-1">
-      Español (Spanish)
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-12-1">
-        Español (Spanish)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../translations/spanish/" title="Hola" class="md-nav__link">
-      Hola
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../translations/spanish/aragonos/" title="aragonOS" class="md-nav__link">
-      aragonOS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../translations/spanish/devplan/" title="Development Plan" class="md-nav__link">
-      Development Plan
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history-vision" title="History &amp; Vision" class="md-nav__link">
-    History &amp; Vision
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organizational-structure" title="Organizational Structure" class="md-nav__link">
-    Organizational Structure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-milestones" title="Development Milestones" class="md-nav__link">
-    Development Milestones
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#01-the-initial-release" title="0.1 — The Initial Release" class="md-nav__link">
-    0.1 — The Initial Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#02-the-public-release" title="0.2 — The Public Release" class="md-nav__link">
-    0.2 — The Public Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#03-the-governance-release" title="0.3 — The Governance Release" class="md-nav__link">
-    0.3 — The Governance Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#04-the-bridge-release" title="0.4 — The Bridge Release" class="md-nav__link">
-    0.4 — The Bridge Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#05-the-refactor-release" title="0.5 — The Refactor Release" class="md-nav__link">
-    0.5 — The Refactor Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#06-the-sweet-release" title="0.6 — The Sweet Release" class="md-nav__link">
-    0.6 — The Sweet Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#07-the-network-release" title="0.7 — The Network Release" class="md-nav__link">
-    0.7 — The Network Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#08-the-court-release" title="0.8 — The Court Release" class="md-nav__link">
-    0.8 — The Court Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#09-the-unknown-release" title="0.9 — The Unknown Release" class="md-nav__link">
-    0.9 — The Unknown Release
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-the-release" title="1.0 — The Release" class="md-nav__link">
-    1.0 — The Release
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                
-                <p><center>
+<p><center>
 <img src="../../images/logo_text_under_dark.png"></p>
-<h1 id="development-plan">Development Plan</h1>
+<h1 id="development-plan">Development Plan<a class="headerlink" href="#development-plan" title="Permanent link">&para;</a></h1>
 <p><em><strong>This documentation is currently outdated and will be updated in Q2 2018</strong></em></p>
 <p>version 1.2</p>
 <p><img src="../../images/development_plan/01.png">
 </center></p>
-<h2 id="introduction"><strong>Introduction</strong></h2>
+<h2 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Aragon is everything you need to run organizations (companies, NGOs, foundations, open
 source projects...) on the Ethereum blockchain. It implements features like a cap table,
 token transfers, voting, roles, fundraising and accounting. Aragon organizations are easily
@@ -2456,7 +694,7 @@ organizations.</p>
 whitepaper.</p>
 <p>This document describes how Aragon Dev plans to develop the Aragon dapp, the Aragon
 Network and how Aragon Dev is positioned in the larger context of the Aragon project. </p>
-<h2 id="history-vision"><strong>History &amp; Vision</strong></h2>
+<h2 id="history-vision"><strong>History &amp; Vision</strong><a class="headerlink" href="#history-vision" title="Permanent link">&para;</a></h2>
 <p><center>
 <img src="../../images/development_plan/02.png" width="50%"><img src="../../images/development_plan/03.png" width="50%">
 </center></p>
@@ -2496,7 +734,7 @@ are easy to use, upgradeable/durable and able to resolve human disputes.</p>
 <p>We want to solve—either us or partnering with others—those points in order to make
 decentralized organizations widespread.</p>
 <p>And, thanks to the Aragon dapp and the Aragon Network, we can solve those points.</p>
-<h2 id="organizational-structure"><strong>Organizational Structure</strong></h2>
+<h2 id="organizational-structure"><strong>Organizational Structure</strong><a class="headerlink" href="#organizational-structure" title="Permanent link">&para;</a></h2>
 <p><center>
 <img src="../../images/development_plan/05.png">
 </center></p>
@@ -2517,12 +755,12 @@ also serve as a service provider for the Aragon Network.</p>
 <p><strong>Funding Priorities</strong> It is intended that the Foundation will deploy the revenue from the token
 sale as depicted in the Intended Use of Revenue document, but it reserves the right to make
 changes if it deems them necessary.</p>
-<h2 id="development-milestones"><strong>Development Milestones</strong></h2>
+<h2 id="development-milestones"><strong>Development Milestones</strong><a class="headerlink" href="#development-milestones" title="Permanent link">&para;</a></h2>
 <p>We will divide development milestones in the form of releases.
 Each release may have multiple deployment stages, from being in alpha stage—running on
 the test network—to begin in the production stage—running on the main network—going
 through multiple testing, security and QA stages.</p>
-<h3 id="01-the-initial-release">0.1 — The Initial Release</h3>
+<h3 id="01-the-initial-release">0.1 — The Initial Release<a class="headerlink" href="#01-the-initial-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/06.png">
 </center>
@@ -2534,7 +772,7 @@ operate. It was not made public.</p>
 <ul>
 <li><strong>Private Alpha</strong>: February 2017</li>
 </ul>
-<h3 id="02-the-public-release">0.2 — The Public Release</h3>
+<h3 id="02-the-public-release">0.2 — The Public Release<a class="headerlink" href="#02-the-public-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/07.png">
 </center>
@@ -2547,7 +785,7 @@ new UI styling and Kovan testnet support.</p>
 <li><strong>Private Alpha</strong>: February 2017</li>
 <li><strong>Public Alpha</strong>: March 2017</li>
 </ul>
-<h3 id="03-the-governance-release">0.3 — The Governance Release</h3>
+<h3 id="03-the-governance-release">0.3 — The Governance Release<a class="headerlink" href="#03-the-governance-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/08.png">
 </center>
@@ -2564,7 +802,7 @@ for using it with Ethereum browsers/clients like Mist, Parity, MetaMask, Status 
 <ul>
 <li><strong>Alpha</strong>: April 2017</li>
 </ul>
-<h3 id="04-the-bridge-release">0.4 — The Bridge Release</h3>
+<h3 id="04-the-bridge-release">0.4 — The Bridge Release<a class="headerlink" href="#04-the-bridge-release" title="Permanent link">&para;</a></h3>
 <p>This release will focus on adding:</p>
 <p><strong>Economic abstraction</strong></p>
 <p>Companies will be able to hold and interact with any standard value-holding token</p>
@@ -2586,7 +824,7 @@ maintaining its access to the funds.</p>
 </ul>
 <p>This will be a development version only focusing on smart contracts, iterating between
 different models for upgradeability, extensibility and security. </p>
-<h3 id="05-the-refactor-release">0.5 — The Refactor Release</h3>
+<h3 id="05-the-refactor-release">0.5 — The Refactor Release<a class="headerlink" href="#05-the-refactor-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/05_release.png">
 </center></p>
@@ -2624,7 +862,7 @@ low-level capabilities.</p>
 <p>This will be the first release that gets deployed to the mainnet.
 After 3 months of public bug bounties in the mainnet, we will start allowing the first
 companies to be created using Aragon in the mainnet.</p>
-<h3 id="06-the-sweet-release">0.6 — The Sweet Release</h3>
+<h3 id="06-the-sweet-release">0.6 — The Sweet Release<a class="headerlink" href="#06-the-sweet-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/10.png">
 </center></p>
@@ -2651,7 +889,7 @@ rewarded.</p>
 <li><strong>Bug bounty (mainnet)</strong>: February 2018</li>
 <li><strong>Private Beta (mainnet)</strong>: March 2018</li>
 </ul>
-<h3 id="07-the-network-release">0.7 — The Network Release</h3>
+<h3 id="07-the-network-release">0.7 — The Network Release<a class="headerlink" href="#07-the-network-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/11.png">
 </center></p>
@@ -2675,7 +913,7 @@ milestones.</p>
 <li><strong>Bug bounty (mainnet)</strong>: April 2018</li>
 <li><strong>Production deploy (mainnet)</strong>: May 2018 </li>
 </ul>
-<h3 id="08-the-court-release">0.8 — The Court Release</h3>
+<h3 id="08-the-court-release">0.8 — The Court Release<a class="headerlink" href="#08-the-court-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/12.png">
 </center></p>
@@ -2694,7 +932,7 @@ decentralized court project to make it work with the network.</p>
 <li><strong>Bug bounty (mainnet)</strong>: Q3-Q4 2018</li>
 <li><strong>Production deploy (mainnet)</strong>: Q4 2018 </li>
 </ul>
-<h3 id="09-the-unknown-release">0.9 — The Unknown Release</h3>
+<h3 id="09-the-unknown-release">0.9 — The Unknown Release<a class="headerlink" href="#09-the-unknown-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/13.png">
 </center></p>
@@ -2709,107 +947,89 @@ very interesting concepts we are researching about.</p>
 entities.  </p>
 <p>We are closely following research and experimentation on other governance mechanisms
 such as <strong>Futarchy</strong>.</p>
-<h3 id="10-the-release">1.0 — The Release</h3>
+<h3 id="10-the-release">1.0 — The Release<a class="headerlink" href="#10-the-release" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../../images/development_plan/14.png">
 </center></p>
 <p>We expect to start marketing Aragon to the mainstream with this release. To achieve that
-mission, we will have to place an important focus on design and user experience.</p>
-                
-                  
-                
-              
-              
-                
-              
-            </article>
-          </div>
+mission, we will have to place an important focus on design and user experience.</p></div>
         </div>
-      </main>
-      
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../multisigs/community/" title="Community" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Community
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../Code_of_Conduct/" title="Aragon Code of Conduct" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Aragon Code of Conduct
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
-        and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
-          Material for MkDocs</a>
-      </div>
-      
-        
-  <div class="md-footer-social">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-      <a href="https://github.com/aragon" class="md-footer-social__link fa fa-github"></a>
-    
-      <a href="https://blog.aragon.one/" class="md-footer-social__link fa fa-medium"></a>
-    
-      <a href="https://www.reddit.com/r/aragonproject/" class="md-footer-social__link fa fa-reddit"></a>
-    
-      <a href="https://twitter.com/AragonProject" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://www.linkedin.com/company/aragonproject/" class="md-footer-social__link fa fa-linkedin"></a>
-    
-  </div>
 
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
-      
-      
-      <script>app.initialize({url:{base:"../.."}})</script>
-      
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2016 - 2018 Searchr</p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
         <script src="../../javascript/extra_js.js"></script>
-      
-    
-    
-      
-    
-  </body>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
 </html>
