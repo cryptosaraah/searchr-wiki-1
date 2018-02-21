@@ -1,10 +1,29 @@
-site_name: 'Aragon Wiki'
-site_url: https://wiki.aragon.one
-repo_name: 'aragon/aragon-wiki'
-repo_url: 'https://github.com/aragon/aragon-wiki'
-site_description: 'Wiki for the Aragon Project'
-theme:     'material'
-site_favicon: 'images/favicon.ico'
+# Project information
+site_name: 'Searchr'
+site_description: 'Searchr'
+site_author: 'Searchr'
+site_url: 'https://squidfunk.github.io/mkdocs-material/'
+
+# Repository
+repo_name: 'shaunnarayan/searchr-wiki'
+repo_url: 'https://github.com/shaunnarayan'
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2018 Searchr'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
 extra_css:
   - 'stylesheets/extra.css'
 extra_javascript:
