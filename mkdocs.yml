@@ -8,7 +8,7 @@ site_favicon: 'images/favicon.ico'
 
 # Repository
 repo_name: 'shaunnarayan/searchr-wiki'
-repo_url: 'https://github.com/shaunnarayan'
+repo_url: 'https://github.com/shaunnarayan/searchr-wiki'
 
 # Copyright
 copyright: 'Copyright &copy; 2016 - 2018 Searchr'
@@ -40,15 +40,13 @@ extra:
     code: 'Roboto Mono'
   social:
     - type: 'github'
-      link: 'https://github.com/aragon'
-    - type: 'medium'
-      link: 'https://blog.aragon.one/'
+      link: 'https://github.com/shaunnarayan'
     - type: 'reddit'
-      link: 'https://www.reddit.com/r/aragonproject/'
+      link: 'https://www.reddit.com/r/searchr/'
     - type: 'twitter'
-      link: 'https://twitter.com/AragonProject'
+      link: 'https://twitter.com/searchr'
     - type: 'linkedin'
-      link: 'https://www.linkedin.com/company/aragonproject/'
+      link: 'https://www.linkedin.com/company/shoplex/'
   feature:
     tabs: false
 pages:
