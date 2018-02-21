@@ -3,6 +3,8 @@ site_name: 'Searchr'
 site_description: 'Searchr'
 site_author: 'Searchr'
 site_url: 'https://squidfunk.github.io/mkdocs-material/'
+theme:     'material'
+site_favicon: 'images/favicon.ico'
 
 # Repository
 repo_name: 'shaunnarayan/searchr-wiki'
