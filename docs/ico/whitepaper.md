@@ -144,7 +144,12 @@ up for discussion.
 
 Any unsold tokens will be burnt.
 
+### Token allocation
+
 <img src="../../images/chart1.png">
+
+### Use of funds
+
 <img src="../../images/chart2.png">
 
 ### Token vesting
