@@ -52,7 +52,7 @@ extra:
 pages:
   - Home: 'index.md'
   - Documentation:
-    - Whitepaper: 'ico/whitepaper.pdf'
+    - Whitepaper: 'ico/whitepaper.md'
     - Multisigs:
       - Overview: 'documentation/multisigs/overview.md'
       - Foundation: 'documentation/multisigs/foundation.md'
