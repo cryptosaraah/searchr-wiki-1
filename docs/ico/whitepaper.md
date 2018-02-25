@@ -49,7 +49,7 @@ organisation (DAO).
 The product roadmap will be developed over time to achieve Searchrs
 eventual targets, which are encompassed by these high level goals.
 
-<img src="../../images/roadmap overview.png">
+<img src="../../images/roadmaps/goals.png">
 
 1. Develop and validate a **best in class** personalised search product
 
@@ -191,7 +191,7 @@ The current product roadmap looks to a 6-12 month horizon, with later
 stages being less concrete in scope and time estimates than those
 before.
 
-<img src="../../images/product roadmap.png">
+<img src="../../images/roadmaps/product.png">
 
 ## Partnerships and Integrations
 
@@ -243,7 +243,7 @@ and as such we perform KYC for all registrars.
 
 ## Development roadmap
 
-<img src="../../images/development roadmap.png">
+<img src="../../images/roadmaps/dev.png">
 
 ## Contributing
 
