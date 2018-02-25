@@ -1,1 +1,4 @@
 site/
+docs/ico/*
+!docs/ico/whitepaper.pdf
+!docs/ico/whitepaper.md
