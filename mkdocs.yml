@@ -52,20 +52,12 @@ extra:
 pages:
   - Home: 'index.md'
   - Documentation:
-    - Whitepaper: 'ico/whitepaper.md'
-    - Governance:
-      - AGP2 - Community Governance Model: 'documentation/Community_Governance_Model.md'
-      - AGP5 - Migration to Open Source Messaging Platform: 'documentation/Migration_to_Open_Source_Messaging_Platform.md'
-      - AGP7 - Merge Aragon HQ and Community meetings: 'documentation/Merge_Aragon_HQ_and_Community_meetings.md'
+    - Whitepaper: 'ico/whitepaper.pdf'
     - Multisigs:
       - Overview: 'documentation/multisigs/overview.md'
       - Foundation: 'documentation/multisigs/foundation.md'
-      - Community: 'documentation/multisigs/community.md'
     - Development Plan: 'documentation/Development_Plan.md'
-    - Aragon Code of Conduct: 'documentation/Code_of_Conduct.md'
-    - Audit reports:
-      - Audit 01 by Adam Dossa: 'documentation/audits/audit01_report_dossa.md'
-      - Audit (Internal) by Brett Sun: 'documentation/audits/audit_internal_sun.md'
+    - Searchr Code of Conduct: 'documentation/Code_of_Conduct.md'
     - Community Content: 'documentation/community_content.md'
   - Development:
     - Overview: 'dev/index.md'
@@ -74,7 +66,6 @@ pages:
       - Community 01:
         - Agenda: 'meetings/community/01.md'
         - Write-Up - Luis: 'meetings/community/write-ups/cm01/luis.md'
-      - Community 01: 'meetings/community/01.md'
   - Jobs:
     - Overview: 'jobs/index.md'
     - Openings:
