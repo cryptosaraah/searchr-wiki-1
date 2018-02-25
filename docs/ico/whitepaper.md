@@ -344,26 +344,35 @@ with a human brain with the exception of
 Sensory pathways will be short-circuited by injecting structured inputs
 (short term, specialised neural networks which transform and flow data
 between existing, pre-trained sensory models
+
 ([Spacy](https://spacy.io/usage/models),
 [mxnet](https://mxnet.apache.org/api/python/gluon/model_zoo.html)).
+
 Muscle pathways will be intercepted and parse feature activations to
 structured outputs.
+
 **Layer to layer latency will not exceed 1000ms.**
+
 Next, we plan to build algorithms which can directly map (relatively)
 high resolution, high frequency, unstructured input signals to the
 previously developed context network. This will include
 decoding/encoding for bandwidth.
+
 **Layer to layer latency will not exceed 500ms.**
+
 Later, we will build inverse algorthims specialised for mapping context
 network activations to to actions (reinforcement learning inspired
 system).
+
 **Layer to layer latency will not exceed 100ms.**
+
 Finally, to complete the picture, a core planning algorithm will be
 built to consider inputs, context, and outputs over discrete periods of
 time in relation to the reward gained. Input will be transformed to a
 common N-D state space with time as the first dimension, and instead of
 feeding the system will employ actions to direct it's own sensors in the
 search space (becoming a self acting agent).
+
 **Layer to layer latency will not exceed 20ms.**
 
 # Summary
