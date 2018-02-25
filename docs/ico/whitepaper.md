@@ -4,6 +4,7 @@ date: 'February 24, 2018'
 title: 'Searchr - Pathing a route to Strong AI'
 ---
 
+<img src="../../images/banner.png">
 # Abstract
 
 The raw total volume of data doubles yearly. Such an overwhelming

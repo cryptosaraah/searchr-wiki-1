@@ -1,3 +1,4 @@
+<img src="images/banner.png">
 # Welcome to the Searchr Wiki
 
 This wiki for Searchr contains much of the content and resources available publicly.
@@ -64,7 +65,7 @@ You can use the menu to the left to navigate the wiki. Here is a brief summary o
 
 ### Why Searchr?
 
-> ...
+<img src="images/roadmaps/goals.png">
 
 <h4 style="color:#00CBE6;">OUR VISION</h4>
 **Evolution of the internet and blockchain technology are changing the ways we interact with each other**
