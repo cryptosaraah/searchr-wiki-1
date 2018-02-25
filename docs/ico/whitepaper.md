@@ -4,7 +4,7 @@ date: 'February 24, 2018'
 title: 'Searchr - Pathing a route to Strong AI'
 ---
 
-<img src="banner.png">
+<img src="../../images/banner.png">
 # Abstract
 
 The raw total volume of data doubles yearly. Such an overwhelming
@@ -49,7 +49,7 @@ organisation (DAO).
 The product roadmap will be developed over time to achieve Searchrs
 eventual targets, which are encompassed by these high level goals.
 
-<img src="roadmap overview.png">
+<img src="../../images/roadmap overview.png">
 
 1. Develop and validate a **best in class** personalised search product
 
@@ -144,8 +144,8 @@ up for discussion.
 
 Any unsold tokens will be burnt.
 
-<img src="chart1.png">
-<img src="chart2.png">
+<img src="../../images/chart1.png">
+<img src="../../images/chart2.png">
 
 ### Token vesting
 
@@ -164,7 +164,7 @@ over time, such as formalised governance voting on the aragon network.
 Miners perform computation for searches, delivering results for
 requested researches in exchange for payment in SCHR tokens.
 
-<img src="contracts.png">
+<img src="../../images/contracts.png">
 
 ### Reputation
 
@@ -183,7 +183,7 @@ important to reduce blockers. We use tools which facilitate agile,
 rapid development, and use integrations with Zapier connections to
 share information across tools.
 
-<img src="tools.png">
+<img src="../../images/tools.png">
 
 ## Product roadmap
 
@@ -191,7 +191,7 @@ The current product roadmap looks to a 6-12 month horizon, with later
 stages being less concrete in scope and time estimates than those
 before.
 
-<img src="product roadmap.png">
+<img src="../../images/product roadmap.png">
 
 ## Partnerships and Integrations
 
@@ -243,7 +243,7 @@ and as such we perform KYC for all registrars.
 
 ## Development roadmap
 
-<img src="development roadmap.png">
+<img src="../../images/development roadmap.png">
 
 ## Contributing
 
@@ -265,7 +265,7 @@ adopters to refine the experience.
 The search screen has been designed to streamline the process of search
 refinement.
 
-<img src="searchui.png">
+<img src="../../images/searchui.png">
 
 ## Analysis
 
