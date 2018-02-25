@@ -4,7 +4,7 @@ date: 'February 24, 2018'
 title: 'Searchr - Pathing a route to Strong AI'
 ---
 
-<img src="../../images/banner.png">
+<img src="banner.png">
 # Abstract
 
 The raw total volume of data doubles yearly. Such an overwhelming
@@ -48,6 +48,8 @@ organisation (DAO).
 
 The product roadmap will be developed over time to achieve Searchrs
 eventual targets, which are encompassed by these high level goals.
+
+<img src="roadmap overview.png">
 
 1. Develop and validate a **best in class** personalised search product
 
@@ -142,6 +144,9 @@ up for discussion.
 
 Any unsold tokens will be burnt.
 
+<img src="chart1.png">
+<img src="chart2.png">
+
 ### Token vesting
 
 In accordance with best practise, all team members, founders, advisor
@@ -159,6 +164,8 @@ over time, such as formalised governance voting on the aragon network.
 Miners perform computation for searches, delivering results for
 requested researches in exchange for payment in SCHR tokens.
 
+<img src="contracts.png">
+
 ### Reputation
 
 Every agent will be scored for reputation by network participants. Bad
@@ -170,14 +177,21 @@ Searchr Ltd is a not for profit organisation registered in Estonia:
 [insert company number]. The organisation exists to provide ongoing
 platform development through hiring of developers for the purposes of
 delivering on our proposed roadmap.
+
 As we operate as a remote team, an asynchronous workflow is incredibly
-important to reduce blockers.
+important to reduce blockers. We use tools which facilitate agile,
+rapid development, and use integrations with Zapier connections to
+share information across tools.
+
+<img src="tools.png">
 
 ## Product roadmap
 
 The current product roadmap looks to a 6-12 month horizon, with later
 stages being less concrete in scope and time estimates than those
 before.
+
+<img src="product roadmap.png">
 
 ## Partnerships and Integrations
 
@@ -207,9 +221,11 @@ manner, taking all possible precautions to ensure the longevity and
 success of the project. We employ the services of
 [LeapIN](https://www.leapin.eu/features) for financial support,
 including access to EU banking services.
+
 We have also contracted the [Argon
 Group](https://argongroup.com/advisory/) to complete due diligence on
 our token offering.
+
 This also necessitates care around anti money laundering requirements,
 and as such we perform KYC for all registrars.
 
@@ -226,6 +242,8 @@ and as such we perform KYC for all registrars.
 # Development
 
 ## Development roadmap
+
+<img src="development roadmap.png">
 
 ## Contributing
 
@@ -247,6 +265,8 @@ adopters to refine the experience.
 The search screen has been designed to streamline the process of search
 refinement.
 
+<img src="searchui.png">
+
 ## Analysis
 
 We provide various visualisations of search results to assist in
@@ -262,10 +282,12 @@ medical imaging (FMRI, cell tagging), computational simulation power and
 more. We can now understand how the human visual pathways work with
 extraordinary detail (although, of course, there is still a lot not yet
 known).
+
 We are slowly, but surely, reverse engineering our minds.
 Searchr aims to advance research in the field of Strong AI in accordance
 with **consumer driven values**, by reinvesting and using acquired
 knowledge to further our understanding.
+
 A trained autonomous agent is only as good as the training it was given,
 just as we are when we first learn to read. If the trainer imbues their
 personal bias in the underlying models, then the agent will behave
@@ -274,11 +296,13 @@ chatbot). Therefore it is of upmost importance to build some form of
 reputation system to protect our common interests as humanity - a task
 suited perfectly for blockchain - for more information on reputation,
 see [insert section].
+
 From a computational perspective, artificial neural networks, spiking
 neural networks and other existing solutions are shown to be
 functionally similar enough to our observations of human neural networks
 that they can be treated as effectively the same for the purposes of
 Searchr.
+
 The process of shaping this computational "putty" of machine learning
 into something which responds to stimulus as a human would is known as
 feature mapping.
@@ -304,6 +328,7 @@ the network to signal the existence of a feature when presented as
 stimuli (an image, or text etc.), these numbers "tune" a network to
 actively respond in the presence of the mapped stimulus (a picture of
 your pet, for example).
+
 This is somewhat similar to how our own neural networks organise in
 layers and map a series of simultaneous stimuli at one point in time to
 another series which is in turn provided as input to the next layer.
