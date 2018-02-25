@@ -86,10 +86,10 @@ YouTube - [https://www.youtube.com/c/searchr_io](https://www.youtube.com/c/searc
 
 ## Team
 
-> <img src="images/team_members/Maria_128.png">
+> <img src="images/team/nay.png">
 
 > * **Development**: [Shaun Narayan](https://twitter.com/CatAddict420)
 
-> <img src="images/team_members/Maria_128.png">
+> <img src="images/team/tay.png">
 
-> * **Deisgn**: [Sarah Narayan](https://twitter.com/creatablenz)
+> * **Deisgn**: [Sarah Narayan](https://twitter.com/cryptosaraah)
