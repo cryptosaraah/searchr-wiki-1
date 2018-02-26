@@ -58,16 +58,15 @@ You can use the menu to the left to navigate the wiki. Here is a brief summary o
 
 ## What is Searchr?
 
-<h4 style="color:#00CBE6;">SEARCH SMARTER</h4>
+<h4 style="color:#0e1a34;">SEARCH SMARTER</h4>
 **Scour the internet using videos, images, audio or web content to start, then let our one-click feedback AI keep searching until it finds what you’re looking for**
 
-> ...
 
 ### Why Searchr?
 
 <img src="images/roadmaps/goals.png">
 
-<h4 style="color:#00CBE6;">OUR VISION</h4>
+<h4 style="color:#0e1a34;">OUR VISION</h4>
 **Evolution of the internet and blockchain technology are changing the ways we interact with each other**
 
 ...
@@ -92,4 +91,4 @@ YouTube - [https://www.youtube.com/c/searchr_io](https://www.youtube.com/c/searc
 
 > <img src="images/team/tay.png">
 
-> * **Deisgn**: [Sarah Narayan](https://twitter.com/cryptosaraah)
+> * **Design**: [Sarah Narayan](https://twitter.com/cryptosaraah)
